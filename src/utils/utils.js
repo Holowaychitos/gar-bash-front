@@ -1,6 +1,5 @@
 export const parseResponse = async (response) => {
   let newResponse = {};
-  console.warn(response);
   if (response.ok) {
     newResponse = {
       ok: true,

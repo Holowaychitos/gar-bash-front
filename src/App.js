@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-import { getPoint } from './services/pointsService.js';
 import Map from './Map';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {count: 1};
-    getPoint()
-  }
   render() {
     return (
       <div className="App">

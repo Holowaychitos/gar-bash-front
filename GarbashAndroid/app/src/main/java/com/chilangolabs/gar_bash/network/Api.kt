@@ -1,6 +1,5 @@
 package com.chilangolabs.gar_bash.network
 
-import com.chilangolabs.gar_bash.BuildConfig
 import com.chilangolabs.gar_bash.network.request.UserUpdatePickGarbage
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -59,11 +58,7 @@ private fun makeInterceptor(): Interceptor {
 
 private fun makeLogginInterceptor(): HttpLoggingInterceptor {
     val loggingInterceptor = HttpLoggingInterceptor()
-    if (BuildConfig.DEBUG) {
-        loggingInterceptor.level = HttpLoggingInterceptor.Level.NONE
-    } else {
-        loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-    }
+    loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
     return loggingInterceptor
 }
 

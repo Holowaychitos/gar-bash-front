@@ -93,7 +93,7 @@ class GeneralActivity : BaseActivity() {
 
             progress.show()
 
-            Api.updateGarbagePick(UserUpdatePickGarbage(), object : OnRqListener {
+            Api.updateGarbagePick(rq, object : OnRqListener {
                 override fun success(response: UserUpdatePickGarbage?) {
                     progress.dismiss()
                     Toast.makeText(this@GeneralActivity, "Request received", Toast.LENGTH_SHORT).show()

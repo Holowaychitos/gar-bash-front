@@ -17,8 +17,11 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         jcenter()
+        google()
+        maven {
+            url 'https://maven.tomtom.com:8443/nexus/content/repositories/releases/'
+        }
     }
 }
 
